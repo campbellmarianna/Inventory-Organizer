@@ -22,6 +22,6 @@ select_query = "SELECT * FROM users"
 for row in cursor.execute(select_query):
     print(row)
 
-connection.commit() # tell it to save to the disc
+connection.commit() # always tell it to save to the disc
 
 connection.close() # good practice
