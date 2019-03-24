@@ -1,30 +1,14 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<!-- JavaScript is always running on the browser it has to call your API to retrieve data from it and show it on the website these applications talk via JSON -->
-<script type="text/javascript">
-	function httpGetAsync(theUrl, callback) {
-	    var xmlHttp = new XMLHttpRequest();
-	    xmlHttp.onreadystatechange = function() {
-	        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-	            callback(xmlHttp.responseText);
-	    }
-	    xmlHttp.open("GET", theUrl, true); // true for asynchronous
-	    xmlHttp.send(null);
-	}
-
-	httpGetAsync('http://127.0.0.1:5000/store', function(response) {
-        alert(response)
-    })
-</script>
-</head>
-<body>
-
-<div id="myElement">
-	Hello, world!
-</div>
-
-
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Index</h1>
+    <p class="important">
+      Welcome to my awesome homepage.
+    </p>
+{% endblock %}

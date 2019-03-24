@@ -2,9 +2,11 @@ from flask import Flask, request, render_template
 from flask_restful import Resource, Api, reqparse
 from flask_jwt import JWT, jwt_required
 
-# from security import authenticate, identity
+from security import authenticate, identity
 
+from flask_bootstrap import Bootstrap
 app = Flask(__name__)
+Bootstrap(app)
 app.secret_key = 'jose'
 api = Api(app)
 
@@ -16,6 +18,9 @@ items = []
 def index(name=None):
     return render_template('hello_form.html', name=name)
 
+@app.route("/home")
+def home():
+    return render_template('home.html')
 
 class Item(Resource):
     parser = reqparse.RequestParser()
@@ -58,15 +63,15 @@ class Item(Resource):
             item.update(data)
         return item
 
-class ItemList(Resource):
-    def get(self):
-        return {'items': items}
+# class ItemList(Resource):
+#     def get(self):
+#         return {'items': items}
 
 
 
 
-api.add_resource(Item, '/item/<string:name>')
-api.add_resource(ItemList, '/items')
+# api.add_resource(Item, '/item/<string:name>')
+# api.add_resource(ItemList, '/items')
 
 if __name__ == '__main__':
     app.run(port = 5000, debug=True)

@@ -4,3 +4,14 @@ code for hello_form:
     <input id="first-name" type="text" name="first_name" />
     <input type="submit" />
 </form>
+
+code for nav bar:
+<ul>
+  <!-- {% if g.user %}
+    <li><span>{{ g.user['username'] }}</span>
+    <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+  {% else %}
+    <li><a href="{{ url_for('auth.register') }}">Register</a>
+    <li><a href="{{ url_for('auth.login') }}">Log In</a>
+  {% endif %} -->
+</ul>

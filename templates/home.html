@@ -1,0 +1,26 @@
+<!-- home.html -->
+<!doctype>
+<html>
+<head>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="home">
+    <div class=hero-image>
+        <img src="/public/img/truck-kendall-henderson-43316-unsplashResize.jpg" class="img-fluid" alt="Responsive Hero Image" >
+    </div>
+    <h1>Reviewed By Trucker</h1>
+    <h3>Review companies that post loads</h3>
+    <!-- Use Bootstrap Button -->
+    <button action="/loads" type="button" id="home-btn" class="btn btn-info">
+        View Loads
+    </button>
+
+    <script type="text/javascript">
+        document.getElementById("home-btn").onclick = function () {
+            location.href = "/loads"
+        }
+    </script>
+</div>
+</body>
+</html>
