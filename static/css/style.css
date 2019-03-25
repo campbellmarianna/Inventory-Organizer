@@ -66,3 +66,16 @@ div.home h3 {
     background-size: cover;
     background-repeat: no-repeat;
 }
+/********************************************************
+Auth-page
+********************************************************/
+div.auth-page button {
+    border-color: #4B9BD5;
+    color: #4B9BD5;
+}
+
+.btn-outline-primary:hover {
+    color: #FFFFFF;
+    background-color: #9CF486;
+    border-color: #9CF486;
+}
