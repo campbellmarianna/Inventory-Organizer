@@ -19,11 +19,50 @@ body {
     color: #444444;
     display: flex;
     flex-direction: column;
-    background-color: #b2bec3;
     text-align: center;
+    padding-top: 109px;
 
 }
-
 /********************************************************
-Home
+IO-Homepage
 ********************************************************/
+
+div.home h1 {
+    /* font-size: 31px;
+    padding-left: 35px;
+    padding-top: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    letter-spacing: 1px; */
+    padding: 18px;
+    padding-top: 27px;
+}
+
+div.home h3 {
+    /* font-size: 19px;
+    font-weight: normal;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px; */
+}
+
+#home-btn {
+    padding: 29px 110px;
+    margin-top: 96px;
+    margin-bottom: 40px;
+}
+
+.btn-outline-primary {
+    color: #A569F8;
+    border-color: #A569F8;
+    border-width: 8px;
+}
+
+@media (min-width: 992px){
+    height: calc(99vh - 50px);
+    width: 100%;
+    background: url('img/truck-kendall-henderson-43316-unsplashResize.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
