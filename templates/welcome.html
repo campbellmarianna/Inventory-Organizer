@@ -1,0 +1,18 @@
+<!-- auth.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="welcome">
+    <h1>Welcome!</h1>
+    <button type="button" id="login-btn"class="btn btn-outline-primary">Log In</button>
+    <button type="button" id="signup-btn"class="btn btn-outline-primary">Sign Up</button>
+
+    <script type="text/javascript">
+        document.getElementById("login-btn").onclick = function () {
+            location.href = "login"
+        }
+        document.getElementById("signup-btn").onclick = function () {
+            location.href = "io-signup"
+        }
+    </script>
+</div>
+{% endblock %}

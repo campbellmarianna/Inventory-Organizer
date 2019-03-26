@@ -1,6 +1,19 @@
-<!-- home.html -->
+<!-- templates/home.html -->
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
 {% block content %}
-<h1> Hello </h1>
+<div class="home">
+    <div class=hero-image>
+        <img src="../static/img/logo-inventoryOrganizer.png" class="img-fluid" alt="Responsive Hero Image" >
+    </div>
+    <h1>Inventory Organizer</h1>
+    <h3>Keep track of your stock</h3>
+    <!-- Use Bootstrap Button -->
+    <button type="button" action="welcome" id="home-btn"class="btn btn-outline-primary">Get Started</button>
+
+    <script type="text/javascript">
+        document.getElementById("home-btn").onclick = function () {
+            location.href = "welcome"
+        }
+    </script>
+</div>
 {% endblock %}

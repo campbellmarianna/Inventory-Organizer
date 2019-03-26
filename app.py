@@ -22,6 +22,14 @@ def index(name=None):
 def home():
     return render_template('home.html')
 
+@app.route("/welcome")
+def welcome():
+    return render_template('welcome.html')
+
+@app.route("/login")
+def welcomeBack():
+    return render_template('login.html')
+
 class Item(Resource):
     parser = reqparse.RequestParser()
     parser.add_argument('price', # can use request parser to go through input fields
